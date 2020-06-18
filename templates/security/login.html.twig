@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block customstylesheets %}
+<link rel="stylesheet" href="/assets/css/login.css">
+{% endblock %}
+{% block menu %}{% endblock %}
+
+
+{% block main %}
+<form method="POST" class="form-signin">
+{% if error %}
+    <div class="alert alert-danger">
+        {{ error.messageKey|trans(error.messageData, 'security') }}
+    </div>
+{% endif %}
+
+
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputUsername">Username</label>
+    <input type="text" name="username" id="inputUsername" class="form-control" required autofocus>
+    <label for="inputPassword">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" required>
+
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="_remember_me"> Remember me
+        </label>
+    </div>
+
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+    
+    <p class="mt-5 mb-3 text-muted">&copy; 2020 <a href="{{path('main_page')}}">main page</a></p>
+</form>
+{% endblock %}
+{% block footer_links %}{% endblock %}

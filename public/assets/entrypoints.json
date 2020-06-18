@@ -1,0 +1,20 @@
+{
+  "entrypoints": {
+    "dashboard.css": {
+      "js": [
+        "/assets/runtime.js"
+      ],
+      "css": [
+        "/assets/dashboard.css.css"
+      ]
+    },
+    "login.css": {
+      "js": [
+        "/assets/runtime.js"
+      ],
+      "css": [
+        "/assets/login.css.css"
+      ]
+    }
+  }
+}
