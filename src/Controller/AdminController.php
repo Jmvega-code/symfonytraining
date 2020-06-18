@@ -20,7 +20,7 @@ class AdminController extends AbstractController
 
 
     /**
-     * @Route("/categories", name="categories")
+     * @Route("/su/categories", name="categories")
      */
     public function categories()
     {
@@ -28,7 +28,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/edit-category", name="edit_category")
+     * @Route("/su/edit-category", name="edit_category")
      */
     public function editCategory()
     {
@@ -44,7 +44,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/upload-video", name="upload_video")
+     * @Route("/su/upload-video", name="upload_video")
      */
     public function uploadVideo()
     {
@@ -52,7 +52,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/users", name="users")
+     * @Route("/su/users", name="users")
      */
     public function users()
     {
